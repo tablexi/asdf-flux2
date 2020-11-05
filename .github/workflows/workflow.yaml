@@ -1,7 +1,7 @@
 name: Main workflow
 
 on:
-  workflow_dispatch
+  workflow_dispatch: {}
   push:
     paths-ignore:
       - "**.md"
