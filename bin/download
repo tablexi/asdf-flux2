@@ -18,7 +18,7 @@ download_flux2() {
 
   local download_path="$tmp_download_dir/$(get_filename)"
 
-  echo "Downloading Helm Chart Testing from ${download_url}"
+  echo "Downloading Flux v2 from ${download_url}"
   status_code=$(curl --write-out "%{http_code}" \
 		--progress-bar \
     -Lo $download_path $download_url)
