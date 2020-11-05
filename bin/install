@@ -8,7 +8,7 @@ install_flux2() {
   # if not asdf version with asdf_download_path then call download script here
   # stolen from https://github.com/jthegedus/asdf-firebase/blob/fdab3584282d1aebe181511f1e8f6bee706b7dc7/bin/install#L11
 	if [ -z "${ASDF_DOWNLOAD_PATH:-}" ]; then
-		tmp_download_dir=$(mktemp -d -t 'asdf_ct_XXXXXX')
+		tmp_download_dir=$(mktemp -d -t 'asdf_flux2_XXXXXX')
 		trap 'rm -rf "${tmp_download_dir}"' EXIT
 		echo "run download script for older version of asdf"
 		export ASDF_DOWNLOAD_PATH="${tmp_download_dir}"
@@ -17,13 +17,13 @@ install_flux2() {
 		bash "$(dirname "$0")/download"
 	fi
 
-  local binary_download="$ASDF_DOWNLOAD_PATH/ct"
+  local binary_download="$ASDF_DOWNLOAD_PATH/flux2"
   local binary_path="$ASDF_INSTALL_PATH/bin"
 
   echo "Installing Binary"
   mkdir -p $binary_path
   cp ${binary_download} $binary_path
-  chmod +x "${binary_path}/ct"
+  chmod +x "${binary_path}/flux"
 }
 
 install_flux2
