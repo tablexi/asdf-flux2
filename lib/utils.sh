@@ -7,5 +7,5 @@ get_platform() {
 }
 
 get_filename() {
-  echo "flux2_${ASDF_INSTALL_VERSION}_$(get_platform).tar.gz"
+  echo "flux_${ASDF_INSTALL_VERSION}_$(get_platform).tar.gz"
 }

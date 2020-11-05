@@ -7,7 +7,7 @@ source "$(dirname "$0")/../lib/utils.sh"
 source "$(dirname "$0")/../lib/helpers.sh"
 
 download_flux2() {
-  local binary_path="${ASDF_DOWNLOAD_PATH}/ct"
+  local binary_path="${ASDF_DOWNLOAD_PATH}/flux2"
   local download_url=$(get_download_url)
 
   if [ -z "${TMPDIR:-}" ]; then
@@ -31,7 +31,7 @@ download_flux2() {
 
   echo "Copying Binary"
   tar -zxf ${download_path} --directory $tmp_download_dir
-  cp ${tmp_download_dir}/ct ${binary_path}
+  cp ${tmp_download_dir}/flux2 ${binary_path}
   echo "binary_path/download:$binary_path"
 }
 
