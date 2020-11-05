@@ -17,7 +17,7 @@ install_flux2() {
 		bash "$(dirname "$0")/download"
 	fi
 
-  local binary_download="$ASDF_DOWNLOAD_PATH/flux2"
+  local binary_download="$ASDF_DOWNLOAD_PATH/flux"
   local binary_path="$ASDF_INSTALL_PATH/bin"
 
   echo "Installing Binary"
