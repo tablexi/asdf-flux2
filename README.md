@@ -12,4 +12,4 @@ asdf plugin-add flux2 https://github.com/tablexi/asdf-flux2.git
 
 ## Use
 
-Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of Helm Chart Testing.
+Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of Flux2.
