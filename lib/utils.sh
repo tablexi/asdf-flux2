@@ -3,7 +3,14 @@
 set -euo pipefail
 
 get_platform() {
-  echo "$(uname | tr '[:upper:]' '[:lower:]')_amd64"
+  arch=$(uname -m)
+  case $arch in
+    armv*) arch="arm";;
+    arm64) arch="arm64";; # m1 macs
+    aarch64) arch="arm64";;
+    *) arch="amd64";;
+  esac
+  echo "$(uname | tr '[:upper:]' '[:lower:]')-${arch}"
 }
 
 get_filename() {
