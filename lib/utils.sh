@@ -10,7 +10,7 @@ get_platform() {
     aarch64) arch="arm64";;
     *) arch="amd64";;
   esac
-  echo "$(uname | tr '[:upper:]' '[:lower:]')-${arch}"
+  echo "$(uname | tr '[:upper:]' '[:lower:]')_${arch}"
 }
 
 get_filename() {
